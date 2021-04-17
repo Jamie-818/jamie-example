@@ -225,3 +225,4 @@ public class FactoryPatternDemo {
 邮件消息发送成功
 ```
 
+源码地址：https://github.com/Jamie-818/jamie-example/tree/master/designpatterns/src/factory
