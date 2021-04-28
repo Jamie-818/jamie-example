@@ -1,14 +1,12 @@
 package threadpool;
 
 import java.util.concurrent.Callable;
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 /**
  * Callable 实现线程创建
  * @author jamie
- * @date 2021/4/12 22:57
  */
 public class CallableDemo implements Callable<Integer> {
 
