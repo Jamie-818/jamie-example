@@ -1,4 +1,4 @@
-package jamie.example.io.nio;
+package jamie.example.io.nio.buffer;
 
 import java.nio.ByteBuffer;
 
