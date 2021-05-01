@@ -1,10 +1,7 @@
-package jamie.example.netty.coder;
+package jamie.example.netty.codec;
 
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandler;
-import io.netty.util.CharsetUtil;
 
 /**
  * 自定义服务端handle

@@ -1,4 +1,4 @@
-package jamie.example.netty.coder;
+package jamie.example.netty.codec;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -27,10 +27,8 @@ public class NettyClient {
                  .handler(new ChannelInitializer<SocketChannel>() {
                      @Override
                      protected void initChannel(SocketChannel ch) {
-                         // 添加解码器
-                         ch.pipeline().addLast("messageDecoder", new MessageDecoder());
-                         // 添加编码器
-                         ch.pipeline().addLast("messageEncoder", new MessageEncoder());
+                         // 添加编解码器
+                         ch.pipeline().addLast("messageDecec", new MessageCodec());
                          //6.向pipeline中添加自定义业务处理handler
                          ch.pipeline().addLast(new NettyClientHandle());
                      }
