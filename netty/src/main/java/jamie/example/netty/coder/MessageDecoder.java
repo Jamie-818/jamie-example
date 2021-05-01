@@ -19,7 +19,7 @@ public class MessageDecoder extends MessageToMessageDecoder<ByteBuf> {
      * @param out 传入到下一个handler里面的对象
      */
     @Override
-    protected void decode(ChannelHandlerContext ctx, ByteBuf msg, List out) throws Exception {
+    protected void decode(ChannelHandlerContext ctx, ByteBuf msg, List<Object> out) {
         System.out.println("正在进行消息解码...");
         out.add(msg.toString(CharsetUtil.UTF_8)); // 传入到下一个handler里面
     }

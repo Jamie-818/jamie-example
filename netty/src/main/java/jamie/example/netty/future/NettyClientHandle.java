@@ -33,9 +33,9 @@ public class NettyClientHandle implements ChannelInboundHandler {
         ChannelFuture channelFuture = ctx.writeAndFlush(Unpooled.copiedBuffer("你好呀,我是Netty客户端", CharsetUtil.UTF_8));
         channelFuture.addListener((ChannelFutureListener)future -> {
             if(future.isSuccess()){
-                System.out.println("数据发送成功");
+                System.out.println("数据发送成功...");
             }else{
-                System.out.println("数据发送失败");
+                System.out.println("数据发送失败...");
             }
 
         });

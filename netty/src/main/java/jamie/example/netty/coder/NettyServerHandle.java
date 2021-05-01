@@ -29,7 +29,7 @@ public class NettyServerHandle implements ChannelInboundHandler {
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) {
         // 消息出站
-        ctx.writeAndFlush(Unpooled.copiedBuffer("你好,我是Netty服务端.", CharsetUtil.UTF_8));
+        ctx.writeAndFlush("你好,我是Netty服务端.");
     }
 
     /**
