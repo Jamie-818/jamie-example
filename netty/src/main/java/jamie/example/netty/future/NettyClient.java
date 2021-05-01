@@ -1,4 +1,4 @@
-package jamie.example.netty;
+package jamie.example.netty.future;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;

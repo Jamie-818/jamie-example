@@ -1,4 +1,4 @@
-package jamie.example.netty;
+package jamie.example.netty.future;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;

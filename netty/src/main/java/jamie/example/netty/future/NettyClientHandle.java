@@ -1,7 +1,9 @@
-package jamie.example.netty;
+package jamie.example.netty.future;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
+import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandler;
 import io.netty.util.CharsetUtil;
@@ -28,7 +30,16 @@ public class NettyClientHandle implements ChannelInboundHandler {
      */
     @Override
     public void channelActive(ChannelHandlerContext ctx) {
-        ctx.writeAndFlush(Unpooled.copiedBuffer("你好呀,我是Netty客户端", CharsetUtil.UTF_8));
+        ChannelFuture channelFuture = ctx.writeAndFlush(Unpooled.copiedBuffer("你好呀,我是Netty客户端", CharsetUtil.UTF_8));
+        channelFuture.addListener((ChannelFutureListener)future -> {
+            if(future.isSuccess()){
+                System.out.println("数据发送成功");
+            }else{
+                System.out.println("数据发送失败");
+            }
+
+        });
+
     }
 
     @Override
